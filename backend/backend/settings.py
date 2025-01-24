@@ -14,7 +14,7 @@ from pathlib import Path
 
 from datetime import timedelta
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'. 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-recqhgarogpj07(576j(zz78f+dxpnn6rpu94uq-d$6!re@j+u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -47,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'rest_framework.authtoken',
+    
     
 ]
 
@@ -179,3 +179,5 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SOCIALACCOUNT_STORE_TOKENS = True
 
+APPEND_SLASH = False
+# ALLOWED_HOSTS = ['localhost']

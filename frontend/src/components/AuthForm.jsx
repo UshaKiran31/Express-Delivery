@@ -35,9 +35,9 @@ const AuthForm = ({ route, method }) => {
                     navigate("/login");
                 }, 2000)
             }
-        } catch (error) {
-            console.error(error);
-            if (error.response) {
+        }   catch (error) {
+              console.error(error);
+              if (error.response) {
                 if (error.response.status === 401) {
                     setError("Invalid credentials");
                 } else if (error.response.status === 400) {
@@ -45,12 +45,12 @@ const AuthForm = ({ route, method }) => {
                 } else {
                     setError("Something went wrong. Please try again.");
                 }
-            } else if (error.request) {
+              } else if (error.request) {
                 setError("Network error. Please check your internet connection.");
-            } else {
+              } else {
                 setError("Something went wrong. Please try again.");
-            }
-        } finally {
+              }
+        }   finally {
             setLoading(false);
         }
     };
@@ -68,41 +68,42 @@ const AuthForm = ({ route, method }) => {
             )}
             {!loading && (
                 <form onSubmit={handleSubmit} className="form">
-                    <h2>{method === 'register' ? 'Register' : 'Login'}</h2>
+                   
+                    <h2>{method === 'register' ? 'Register' : 'Login' }</h2>
                     {error && <div className="error-message">{error}</div>}
                     {sucess && <div className="success-message">{sucess}</div>}
                     <div className="form-group">
                         <label htmlFor="username">Username:</label>
-                        <input
-                            type="text"
-                            id="username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                        <input 
+                            type="text" 
+                            id="username" 
+                            value={username} 
+                            onChange={(e) => setUsername(e.target.value)} 
                             required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="username">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                        <input 
+                            type="password" 
+                            id="password" 
+                            value={password}  
+                            onChange={(e) => setPassword(e.target.value)} 
                             required />
                     </div>
                     <button type="submit" className="form-button">
-                        {method === 'register' ? 'Register' : 'Login'}
+                        {method === 'register'? 'Register' : 'Login'}
                     </button>
                     <button type="button" className="google-button" onClick={handleGoogleLogin}>
                         <img src={google} alt="Google icon" className="google-icon" />
-                        {method === 'register' ? 'Register with Google' : 'Login with Google'}
+                        {method === 'register'? 'Register with Google' : 'Login with Google'}
                     </button>
                     {method === 'login' && (
-                        <p className="toggle-text">Dont have an account?
-                            <span className="toggle-link" onClick={() => navigate("/register")}>Register</span></p>
+                        <p className="toggle-text">Dont have an account? 
+                        <span className="toggle-link" onClick={() => navigate("/register")}>Register</span></p>
                     )}
-                    {method === 'register' && (
-                        <p className="toggle-text">Already have an account?
-                            <span className="toggle-link" onClick={() => navigate("/login")}>Login</span></p>
+                    {method ==='register' && (
+                        <p className="toggle-text">Already have an account? 
+                        <span className="toggle-link" onClick={() => navigate("/login")}>Login</span></p>
                     )}
                 </form>
             )}

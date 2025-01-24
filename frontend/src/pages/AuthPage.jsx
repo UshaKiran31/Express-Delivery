@@ -10,9 +10,9 @@ const AuthPage = ({initialMethod}) => {
         setMethod(initialMethod);
     },[initialMethod]);
 
-    const route = method === 'login' ? '/api/token/' :'/api/user/register';
+    const route = method === 'login' ? '/api/token/' :'/api/user/register/';
   return (
-    <div>
+    <div >
       <AuthForm route ={route} method ={method} />
     </div>
   );

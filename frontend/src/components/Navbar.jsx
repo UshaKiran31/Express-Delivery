@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 import '../styles/Navbar.css';
 import {useAuthentication} from "../auth.js"
 

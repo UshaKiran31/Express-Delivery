@@ -1,16 +1,18 @@
 
 import "../styles/Header.css";
-import bgwoman from "../assets/bg-woman.jpg";
+import About from "../assets/About.png";
+
 
 
 const Header = () => {
     return (
         <header className="header">
-            <img src={bgwoman} alt="Background woman" className="header-bg" />
+            <img src={About} alt="Background woman" className="header-bg" />
             <div className="header-content">
-                <h1>Put your money to work</h1>
-                <h3>Buy from us now!</h3>
-                <button>Start Buying</button>
+                <h1>Quick, Reliable And Affordable</h1>
+                <h3>It takes just five minutes to send an express parcel anywhere in India via ExpressDelivery. We are always at your service.
+                </h3>
+                <button>Track</button>
             </div>
            
         </header>
