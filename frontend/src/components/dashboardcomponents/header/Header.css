@@ -1,0 +1,47 @@
+
+  .layout-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand h1 {
+    font-size: 1.5rem;
+    color: #46856a;
+    margin: 0;
+    padding-left: 12px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 1rem;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    font-size: 1.5rem;
+  }
+  
