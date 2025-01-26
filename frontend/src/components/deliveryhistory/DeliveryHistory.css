@@ -1,0 +1,76 @@
+/* General container styles */
+.delivery-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+    padding: 1.5rem;
+  }
+  
+  /* Title styling */
+  .delivery-history-title {
+    font-size: 1.5rem; /* Tailwind's text-2xl */
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+  }
+  
+  /* Card styling */
+  .delivery-history-card {
+    background-color: #ffffff; /* Tailwind's bg-white */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+    border-radius: 0.375rem; /* Tailwind's rounded-lg */
+    padding: 1.5rem; /* Tailwind's p-6 */
+    width: 100%;
+    max-width: 48rem; /* Tailwind's max-w-3xl */
+  }
+  
+  /* Table styling */
+  .delivery-history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .delivery-history-table th,
+  .delivery-history-table td {
+    padding: 0.75rem; /* Tailwind's p-3 */
+    border: 1px solid #e5e7eb; /* Tailwind's border */
+    text-align: left;
+  }
+  
+  .delivery-history-table th {
+    background-color: #e5e7eb; /* Tailwind's bg-gray-200 */
+    font-weight: 500; /* Tailwind's font-medium */
+  }
+  
+  .delivery-history-table tr:nth-child(odd) {
+    background-color: #f9fafb; /* Tailwind's odd:bg-gray-100 */
+  }
+  
+  .delivery-history-table tr:hover {
+    background-color: #f3f4f6; /* Tailwind's hover:bg-gray-50 */
+  }
+  
+  /* Status styles */
+  .status-delivered {
+    color: #16a34a; /* Tailwind's text-green-600 */
+    font-weight: bold;
+  }
+  
+  .status-in-transit {
+    color: #2563eb; /* Tailwind's text-blue-600 */
+    font-weight: bold;
+  }
+  
+  .status-delayed {
+    color: #dc2626; /* Tailwind's text-red-600 */
+    font-weight: bold;
+  }
+  
+  /* Empty message styling */
+  .delivery-history-empty {
+    text-align: center;
+    color: #9ca3af; /* Tailwind's text-gray-600 */
+  }
+  

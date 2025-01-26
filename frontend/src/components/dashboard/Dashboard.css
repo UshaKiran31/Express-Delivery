@@ -1,0 +1,155 @@
+
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    /* padding: 1.5rem; */
+  }
+
+h3,h2{
+  font-weight: bolder;
+}
+
+p{
+  font-weight: 600;
+  color: #979090;
+}
+  .dashboard-header {
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .dashboard-header p {
+    color: #6b7280;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stats-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .orange-bg {
+    background-color: #ffedd5;
+  }
+  
+  .green-bg {
+    background-color: #d1fae5;
+  }
+  
+  .blue-bg {
+    background-color: #dbeafe;
+  }
+  
+  .action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .action-buttons button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-shipment {
+    background-color:#46856a;
+    border: none;
+    height: 75px;
+  }
+
+  .cs{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .create-shipment:hover {
+    background-color: #2b5442;
+  }
+  
+  .reschedule-delivery {
+    background-color: #46856a;
+    border: none;
+  }
+  
+  .reschedule-delivery:hover {
+    background-color: #2b5442;
+  }
+  
+  .track-shipment {
+    background-color: #46856a;
+    border: none;
+  }
+  
+  .track-shipment:hover {
+    background-color: #2b5442;
+  }
+  
+  .provide-feedback {
+    background-color: #46856a;
+    border: none;
+  }
+  
+  .provide-feedback:hover {
+    background-color:#2b5442;
+  }
+  
+  .shipment-table {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .shipment-table h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .shipment-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .shipment-table th,
+  .shipment-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+.icon-container {
+  width: 6rem; /* Adjust size to match the circle */
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f3f4f6; /* Light background color */
+  margin: none auto; /* Center align the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Styling for the images within the containers */
+.icon-container img {
+  width: 150%; 
+}
