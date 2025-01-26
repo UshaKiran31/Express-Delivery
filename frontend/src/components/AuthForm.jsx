@@ -10,6 +10,8 @@ import google from "../assets/google.png";
 const AuthForm = ({ route, method }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [sucess, setSucess] = useState(null);
@@ -22,7 +24,7 @@ const AuthForm = ({ route, method }) => {
         setSucess(null);
 
         try {
-            const res = await api.post(route, { username, password });
+            const res = await api.post(route, { username, password, email });
 
             if (method === 'login') {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
@@ -90,6 +92,29 @@ const AuthForm = ({ route, method }) => {
                             onChange={(e) => setPassword(e.target.value)} 
                             required />
                     </div>
+                    {method === 'register' && (
+                        <>
+                            <div className="form-group">
+                                <label htmlFor="email">Email:</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    value={email} 
+                                    onChange={(e) => setEmail(e.target.value)} 
+                                    required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="phoneNumber">Phone Number:</label>
+                                <input 
+                                    type="text" 
+                                    id="phoneNumber" 
+                                    value={phoneNumber} 
+                                    onChange={(e) => setPhoneNumber(e.target.value)} 
+                                    pattern="\d{10}" 
+                                    required />
+                            </div>
+                        </>
+                    )}
                     <button type="submit" className="form-button">
                         {method === 'register'? 'Register' : 'Login'}
                     </button>

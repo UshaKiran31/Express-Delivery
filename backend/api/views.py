@@ -34,10 +34,14 @@ class UserDashboardView(generics.GenericAPIView):
     def get(self, request, *args,**kwargs):
         user = request.user
 
+        phone_number = getattr(user.profile, 'phone_number', None)
+
         #prepare user data
         user_data = {
             'id':user.id,
             'username':user.username,
+            'email':user.email,
+            'phone_number': phone_number,
             'is_staff': user.is_staff,
             'is_active' : user.is_active
         }
