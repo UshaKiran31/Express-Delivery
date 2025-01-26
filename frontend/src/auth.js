@@ -70,6 +70,9 @@ export const useAuthentication = () => {
                 },
             });
             console.log("Validated response: ", res.data);
+            if (res.data.valid) {
+                localStorage.setItem(ACCESS_TOKEN, res.data.access_token);
+            }
             return res.data.valid;
         } catch (error) {
             console.error('Error validating Google token', error);
