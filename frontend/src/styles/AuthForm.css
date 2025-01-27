@@ -1,6 +1,6 @@
 /* AuthForm.css */
 
-.form-container {
+.form-container-auth {
     background-color: white;
     padding: 40px;
     border-radius: 8px;
@@ -11,29 +11,29 @@
     margin-top: 70px;
 }
 
-.form {
+.form-auth {
     display: flex;
     flex-direction: column;
     
 }
 
-.form h2 {
+.form-auth h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
 
-.form-group {
+.form-group-auth {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.form-group-auth label {
     display: block;
     margin-bottom: 5px;
     color: #333;
 }
 
-.form-group input {
+.form-group-auth input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -43,12 +43,12 @@
 }
 
 
-.form-group input:focus {
+.form-group-auth input:focus {
     border-color: #4A846B; 
     box-shadow: 0 0 0 2px rgba(61, 86, 255, 0.2); 
 }
 
-.form-button {
+.form-button-auth {
     padding: 10px 15px;
     background-color: #4A846B;
     border: none;
@@ -59,7 +59,7 @@
     transition: background-color 0.3s ease;
 }
 
-.form-button:hover {
+.form-button-auth:hover {
     background-color: #4A846B;
 }
 

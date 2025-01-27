@@ -44,4 +44,10 @@
   .user-icon {
     font-size: 1.5rem;
   }
-  
+  .nav-icon{
+    text-decoration: none;
+  }
+  .logo{
+    text-decoration: none;
+    color: #46856a;
+  }

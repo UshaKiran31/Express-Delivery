@@ -22,7 +22,7 @@ function RedirectGoogleAuth() {
             axios.get('http://localhost:8000/api/auth/user/')
                 .then(response => {
                     console.log('User data:', response.data);
-                    navigate('/')
+                    navigate('/dashboard')
                 })
                 .catch(error => {
                     console.error('Error verfiying token:', error.response ? error.response.data : error.message);

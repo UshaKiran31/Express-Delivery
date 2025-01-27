@@ -62,19 +62,19 @@ const AuthForm = ({ route, method }) => {
     };
 
     return (
-        <div className="form-container">
+        <div className="form-container-auth">
             {loading && (
                 <div className="loading-indicator">
                     {error ? <span className="error-message">{error}</span> : <div className="spinner"></div>}
                 </div>
             )}
             {!loading && (
-                <form onSubmit={handleSubmit} className="form">
+                <form onSubmit={handleSubmit} className="form-auth">
                    
                     <h2>{method === 'register' ? 'Register' : 'Login' }</h2>
                     {error && <div className="error-message">{error}</div>}
                     {sucess && <div className="success-message">{sucess}</div>}
-                    <div className="form-group">
+                    <div className="form-group-auth">
                         <label htmlFor="username">Username:</label>
                         <input 
                             type="text" 
@@ -83,7 +83,7 @@ const AuthForm = ({ route, method }) => {
                             onChange={(e) => setUsername(e.target.value)} 
                             required />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group-auth">
                         <label htmlFor="username">Password:</label>
                         <input 
                             type="password" 
@@ -94,7 +94,7 @@ const AuthForm = ({ route, method }) => {
                     </div>
                     {method === 'register' && (
                         <>
-                            <div className="form-group">
+                            <div className="form-group-auth">
                                 <label htmlFor="email">Email:</label>
                                 <input 
                                     type="email" 
@@ -103,7 +103,7 @@ const AuthForm = ({ route, method }) => {
                                     onChange={(e) => setEmail(e.target.value)} 
                                     required />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-auth">
                                 <label htmlFor="phoneNumber">Phone Number:</label>
                                 <input 
                                     type="text" 
@@ -115,7 +115,7 @@ const AuthForm = ({ route, method }) => {
                             </div>
                         </>
                     )}
-                    <button type="submit" className="form-button">
+                    <button type="submit" className="form-button-auth">
                         {method === 'register'? 'Register' : 'Login'}
                     </button>
                     <button type="button" className="google-button" onClick={handleGoogleLogin}>

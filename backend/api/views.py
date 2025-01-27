@@ -11,6 +11,7 @@ from django.http import JsonResponse
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 import json
+from .models import Profile
 
 User = get_user_model()
 
@@ -34,7 +35,11 @@ class UserDashboardView(generics.GenericAPIView):
     def get(self, request, *args,**kwargs):
         user = request.user
 
-        phone_number = getattr(user.profile, 'phone_number', None)
+        # phone_number = getattr(user.profile, 'phone_number', None)
+        try:
+            phone_number = user.profile.phone_number
+        except Profile.DoesNotExist:
+            phone_number = None
 
         #prepare user data
         user_data = {

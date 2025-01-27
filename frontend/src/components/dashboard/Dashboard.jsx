@@ -2,11 +2,11 @@ import {useEffect, useState} from "react";
 import api from '../../api';
 import './Dashboard.css';
 import { ACCESS_TOKEN } from "../../token";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuthentication } from "../../auth";
+import { Link } from "react-router-dom";
 import img1 from './Dashboard-icons/imges/TruckWithTracking.png';
 import img2 from './Dashboard-icons/imges/twoPeople.png';
 import img3 from './Dashboard-icons/imges/ClockBehindMan.png';
+
 
 
 const Dashboard = () => {
@@ -14,7 +14,6 @@ const Dashboard = () => {
     const[isAdmin,setIsAdmin] = useState(false);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
 
     useEffect(()=> {
         const fetchUserData = async() => {
@@ -46,34 +45,14 @@ const Dashboard = () => {
 
         fetchUserData();
     },[]);
-    const {logout} = useAuthentication();
-    const handleLogout = () => {
-        logout();
-        navigate('//');
-    }
-    
+   
 
     //set up function to render user data
     const renderUserData =() =>(
         <div>
-            {/* <Layout /> */}
-            {/* <Header />
-            <Sidebar /> */}
-            {/* <h2>Welcome, {userData.username}!</h2> */}
-            {/* {isAdmin && <p>You are an admin.</p> }
-            <p>Yoour email:{userData.email}</p>
-            <p>Status {userData.is_active ? "Active" : "Inactive"}</p>
-            <li className="dashboard-icon">
-                <Link to = "/dashboard">DB</Link>
-            </li>
-             <li>
-                <Link to = "/" onClick={handleLogout}  className="navbar-signin-button">Logout</Link>
-            </li> */}
-
-            {/* 02 */}
             <div className="dashboard-container">
       <header className="dashboard-header">
-        <h1>Welcome {userData.username}!</h1>
+        <h1>Welcome {userData.username} !</h1>
         <p>Welcome back to ExpressDelivery dashboard</p>
       </header>
 
@@ -159,7 +138,7 @@ const Dashboard = () => {
             </tr>
             <tr>
               <td>AWB20251205</td>
-              <td>Umesh Chandra K</td>
+              <td>Ramya</td>
               <td>Hyderabad, Telangana</td>
               <td>In Transit</td>
               <td>Jan 7, 2025</td>
@@ -173,7 +152,7 @@ const Dashboard = () => {
             </tr>
             <tr>
               <td>AWB20251207</td>
-              <td>Bharath</td>
+              <td>Asritha</td>
               <td>Hyderabad, Telangana</td>
               <td>Delivered</td>
               <td>Jan 6, 2025</td>
@@ -187,7 +166,7 @@ const Dashboard = () => {
             </tr>
             <tr>
               <td>AWB20251209</td>
-              <td>Prem</td>
+              <td>Vyshanavi</td>
               <td>Guntur, Andhra Pradesh</td>
               <td>Delivered</td>
               <td>Dec 24, 2024</td>
