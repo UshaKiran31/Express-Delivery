@@ -46,7 +46,15 @@
   }
   .nav-icon{
     text-decoration: none;
+    color: black;
+    font-size: x-large;
+    padding-left: 10px;
   }
+
+  .nav-icon:active{
+    color: rgb(87, 85, 85);
+  }
+
   .logo{
     text-decoration: none;
     color: #46856a;
