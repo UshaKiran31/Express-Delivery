@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CreateShipment from "../CreateShipment";
@@ -84,9 +84,10 @@ const PaymentForm = () => {
   );
 };
 
-const Payment = () => (
+// eslint-disable-next-line react/prop-types
+const Payment = ({ onSubmitSuccess }) => (
   <Elements stripe={stripePromise}>
-    <PaymentForm />
+    <PaymentForm onSubmitSuccess={onSubmitSuccess} />
   </Elements>
 );
 
